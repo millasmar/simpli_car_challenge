@@ -1,0 +1,35 @@
+.main {
+  height: 85vh;
+  display: flex;
+  background-image: url("../images/nissanPickUp.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.homeText {
+  width: 60%;
+  align-self: center;
+  margin-left: 80px;
+}
+.homeText h1 {
+  color: red;
+}
+.homeText p {
+  width: 56%;
+  color: whitesmoke;
+  margin-bottom: 40px;
+}
+.homeText button {
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 7px;
+  border: none;
+  height: 45px;
+  color: whitesmoke;
+  background-color: red;
+}
+.homeText button img {
+  transform: rotate(270deg);
+  width: 5%;
+}
