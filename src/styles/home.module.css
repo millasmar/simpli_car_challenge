@@ -18,7 +18,7 @@
   color: whitesmoke;
   margin-bottom: 40px;
 }
-.homeText button {
+.homeButton {
   display: flex;
   width: 300px;
   justify-content: space-around;
@@ -28,8 +28,61 @@
   height: 45px;
   color: whitesmoke;
   background-color: red;
+  text-decoration: none;
 }
-.homeText button img {
+.homeButton:hover {
+  color: white;
+}
+.homeButton img {
   transform: rotate(270deg);
   width: 5%;
+}
+
+@media (max-width: 485px) {
+  .main {
+    height: 85vh;
+    display: flex;
+    background-image: url("../images/nissanMobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .homeText {
+    position: absolute;
+    width: 70%;
+    align-self: center;
+    margin-left: 80px;
+    top: 20%;
+    left: -15%;
+  }
+  .homeText h1 {
+    color: red;
+    font-size: 2.3rem;
+  }
+  .homeText p {
+    width: 100%;
+    color: black;
+    margin-bottom: 40px;
+  }
+  .homeButton {
+    position: absolute;
+    bottom: -90%;
+    left: -12%;
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 7px;
+    border: none;
+    height: 45px;
+    color: whitesmoke;
+    background-color: red;
+    text-decoration: none;
+  }
+  .homeButton:hover {
+    color: white;
+  }
+  .homeButton img {
+    transform: rotate(270deg);
+    width: 5%;
+  }
 }

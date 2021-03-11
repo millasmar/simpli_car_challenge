@@ -47,6 +47,7 @@
   background-color: transparent;
   justify-content: space-around;
   color: red;
+  text-decoration: none;
 }
 .cardButton img {
   width: 5%;
@@ -64,4 +65,76 @@
   font-size: 0.65rem;
   color: gray;
   text-align: justify;
+}
+
+@media (max-width: 485px) {
+  .main {
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    margin-bottom: 12px;
+  }
+  .card {
+    width: 100%;
+    height: auto;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card h2 {
+    text-align: center;
+  }
+  .card img {
+    width: 60%;
+  }
+  .card hr {
+    width: 80%;
+    align-self: center;
+  }
+  .cardText {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .cardText h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: gray;
+  }
+  .cardText p {
+    margin: 0;
+  }
+  .cardButton {
+    width: 100%;
+    display: flex;
+    border: none;
+    background-color: transparent;
+    justify-content: space-around;
+    color: red;
+  }
+  .cardButton img {
+    width: 5%;
+    transform: rotate(-90deg);
+    align-self: center;
+  }
+  #text {
+    width: 85%;
+    font-size: 0.65rem;
+    color: gray;
+    text-align: justify;
+  }
+  #smallText {
+    width: 90%;
+    font-size: 0.65rem;
+    color: gray;
+    text-align: justify;
+    margin: 0 auto;
+  }
 }

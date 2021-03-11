@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Layout from "../containers/Layout";
 import styles from "../styles/home.module.css";
 import Arrow from "../images/arrow.svg";
@@ -14,10 +15,10 @@ function Home() {
             servicios asociados desde la comodidad de tu sofá. Probanos!
           </p>
 
-          <button>
+          <Link to="/productos" className={styles.homeButton}>
             INGRESAR A NISSAN STORE
             <img src={Arrow} />
-          </button>
+          </Link>
         </div>
       </div>
     </Layout>

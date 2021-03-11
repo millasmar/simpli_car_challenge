@@ -1,37 +1,44 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "../styles/products.module.css";
-import Van from "../images/orangeVan.jpg";
 import Arrow from "../images/arrowRed.svg";
 
-function Products({ data }) {
-  console.log(data);
+function Products({ products, handleClick }) {
   return (
     <div className={styles.main}>
-      {data &&
-        data.map((car) => {
+      {products.results &&
+        products.results.map((car) => {
           return (
-            <>
-              <div className={styles.card}>
-                <img src={Van} />
-                <h2>{car.model.toUpperCase()}</h2>
-                <hr></hr>
-                <div className={styles.cardText}>
-                  <h3>PRECIO DESDE</h3>
-                  <p>
-                    <strong>{`US$ ${car.amount}`}</strong>
-                  </p>
-                </div>
-                <hr></hr>
-                <button className={styles.cardButton}>
-                  VER DETALLES DE MODELO
-                  <img src={Arrow} />
-                </button>
-                <p id={styles.text}>
-                  Imágenes meramente ilustrativas no reportando la realidad
-                  exacta, pudiendo existir variaciones en la percepción.
+            <div className={styles.card} key={car.id}>
+              <img
+                alt="Imágen de vehículo"
+                src={`https://s3.sa-east-1.amazonaws.com/simplimotos-stg.com/${car.gallery[1].large}`}
+              />
+              <h2>{car.model.toUpperCase()}</h2>
+              <hr></hr>
+              <div className={styles.cardText}>
+                <h3>PRECIO DESDE</h3>
+                <p>
+                  <strong>{`US$ ${car.amount}`}</strong>
                 </p>
               </div>
-            </>
+              <hr></hr>
+
+              <Link
+                onClick={() => {
+                  handleClick(car.id);
+                }}
+                to={`/producto/${car.id}`}
+                className={styles.cardButton}
+              >
+                VER DETALLES DE MODELO
+                <img src={Arrow} />
+              </Link>
+              <p id={styles.text}>
+                Imágenes meramente ilustrativas no reportando la realidad
+                exacta, pudiendo existir variaciones en la percepción.
+              </p>
+            </div>
           );
         })}
       <p id={styles.smallText}>
